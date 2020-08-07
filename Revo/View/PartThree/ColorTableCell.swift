@@ -6,4 +6,10 @@
 //  Copyright © 2020 Bryan Nguyen. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ColorTableCell: BaseCell {
+    override func setupViews() {
+        self.backgroundColor = UIColor.random()
+    }
+}

@@ -14,17 +14,17 @@ class TableViewController: UITableViewController {
     let labelCellId = "labelCellId"
     
     override func viewDidLoad() {
-        self.navigationItem.title = "Part 1"
+        navigationItem.title = "Part 1"
         setupTableView()
     }
     
     private func setupTableView() {
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        self.tableView.tableFooterView = UIView()
-        self.tableView.register(LabelledImageCell.self, forCellReuseIdentifier: labelledImageCellId)
-        self.tableView.register(ColorSliderCell.self, forCellReuseIdentifier: colorSliderCellId)
-        self.tableView.register(LabelCell.self, forCellReuseIdentifier: labelCellId)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.tableFooterView = UIView()
+        tableView.register(LabelledImageCell.self, forCellReuseIdentifier: labelledImageCellId)
+        tableView.register(ColorSliderCell.self, forCellReuseIdentifier: colorSliderCellId)
+        tableView.register(LabelCell.self, forCellReuseIdentifier: labelCellId)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

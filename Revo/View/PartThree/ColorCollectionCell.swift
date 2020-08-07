@@ -1,5 +1,5 @@
 //
-//  Testcell.swift
+//  ColorCollectionCell.swift
 //  Revo
 //
 //  Created by Bryan Nguyen on 8/7/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestCell: UICollectionViewCell {
+class ColorCollectionCell: UICollectionViewCell {
     let label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -27,11 +27,6 @@ class TestCell: UICollectionViewCell {
     
     public func setupViews(color: UIColor, value: Int) {
         backgroundColor = color
-//        layer.cornerRadius = self.frame.size.width / 2
-//        backgroundColor = color
-//        label.text = String(value)
-//        addSubview(label)
-//        setupLabel()
     }
     
     private func setupLabel() {

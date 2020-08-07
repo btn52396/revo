@@ -8,27 +8,28 @@
 
 import Foundation
 
-class Downloader {
-    func load(songLink: String, completionHandler: @escaping (String) -> ()) {
-        let url = URL(string: songLink)!
+class NetworkOperations {
+    func download(songLink: String, completionHandler: @escaping (String) -> ()) {
+        if let url = URL(string: songLink) {
+            let downloadTask = URLSession.shared.downloadTask(with: url) {
+                fileURL, response, error in
+                guard let fileURL = fileURL else { return }
 
-        let downloadTask = URLSession.shared.downloadTask(with: url) {
-            urlOrNil, responseOrNil, errorOrNil in
-            guard let fileURL = urlOrNil else { return }
-            
-            do {
-                let documentsURL = try
-                    FileManager.default.url(for: .documentDirectory,
-                                            in: .userDomainMask,
-                                            appropriateFor: nil,
-                                            create: false)
-                let savedURL = documentsURL.appendingPathComponent(fileURL.lastPathComponent)
-                try FileManager.default.moveItem(at: fileURL, to: savedURL)
-                completionHandler(savedURL.absoluteString)
-            } catch {
-                print ("file error: \(error)")
+                do {
+                    let documentsURL = try
+                        FileManager.default.url(for: .documentDirectory,
+                                                in: .userDomainMask,
+                                                appropriateFor: nil,
+                                                create: false)
+                    let savedURL = documentsURL.appendingPathComponent("canthelpfallinginlove.m4a")
+                    try! FileManager.default.removeItem(at: savedURL)
+                    try FileManager.default.copyItem(at: fileURL, to: savedURL)
+                    completionHandler(savedURL.absoluteString)
+                } catch {
+                    print ("file error: \(error)")
+                }
             }
+            downloadTask.resume()
         }
-        downloadTask.resume()
     }
 }
