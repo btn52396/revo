@@ -116,7 +116,6 @@ extension MusicPlayerView {
         player.pause()
         player.replaceCurrentItem(with: nil)
         NotificationCenter.default.removeObserver(self)
-        print("stop")
     }
     
     @objc func playButtonTapped(_ sender: UIButton) {

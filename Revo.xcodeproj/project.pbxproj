@@ -35,7 +35,6 @@
 		93B39E8E24DBCAE400121F30 /* 540x540bb-60.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 93B39E8D24DBCAE400121F30 /* 540x540bb-60.jpg */; };
 		93B39E9024DBCC5200121F30 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B39E8F24DBCC5200121F30 /* MusicPlayerView.swift */; };
 		93B39E9224DBDBD700121F30 /* NetworkOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B39E9124DBDBD700121F30 /* NetworkOperations.swift */; };
-		93B39E9424DBE68800121F30 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B39E9324DBE68800121F30 /* AudioPlayer.swift */; };
 		93E1C66324DB469C006EB025 /* LabelledImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E1C66224DB469C006EB025 /* LabelledImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -391,7 +390,6 @@
 				93B39E8324DB47EB00121F30 /* LabelledImageCell.swift in Sources */,
 				933D04A024D92718002FB2D8 /* UIColorExtension.swift in Sources */,
 				93E1C66324DB469C006EB025 /* LabelledImage.swift in Sources */,
-				93B39E9424DBE68800121F30 /* AudioPlayer.swift in Sources */,
 				933D04B024D9D0FD002FB2D8 /* BaseCell.swift in Sources */,
 				936E87BC24DD4FA100E6E786 /* BaseCollectionCell.swift in Sources */,
 				93B39E9024DBCC5200121F30 /* MusicPlayerView.swift in Sources */,

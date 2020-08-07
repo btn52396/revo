@@ -21,8 +21,7 @@ class NetworkOperations {
                                                 in: .userDomainMask,
                                                 appropriateFor: nil,
                                                 create: false)
-                    let savedURL = documentsURL.appendingPathComponent("canthelpfallinginlove.m4a")
-                    try! FileManager.default.removeItem(at: savedURL)
+                    let savedURL = documentsURL.appendingPathComponent(UUID().uuidString + ".m4a")
                     try FileManager.default.copyItem(at: fileURL, to: savedURL)
                     completionHandler(savedURL.absoluteString)
                 } catch {
